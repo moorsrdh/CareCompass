@@ -1,6 +1,6 @@
 # Overview
 
-This is a community support services directory application that helps users find local assistance services like food pantries, shelters, healthcare, and employment resources. The application provides a searchable interface with category filtering, location-based results, and emergency contact functionality. It's built as a full-stack web application with a React frontend and Express.js backend, designed to serve vulnerable populations seeking community assistance.
+This is "HelpFinder" - a community support services directory application that helps users find local assistance services like food pantries, shelters, healthcare, employment resources, and faith-based community support. The application provides a searchable interface with category filtering, location-based results, and emergency contact functionality. It's built as a full-stack web application with a React frontend and Express.js backend, designed to serve vulnerable populations seeking community assistance.
 
 # User Preferences
 

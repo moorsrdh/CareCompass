@@ -19,7 +19,7 @@ export default function AppHeader() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <HeartHandshake className="text-primary text-2xl" />
-            <h1 className="text-xl font-bold text-foreground">Community Support</h1>
+            <h1 className="text-xl font-bold text-foreground">HelpFinder</h1>
           </div>
           <Button
             size="icon"
