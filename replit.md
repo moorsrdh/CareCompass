@@ -30,8 +30,10 @@ Preferred communication style: Simple, everyday language.
 - Migration system configured for production database deployment
 
 ## Authentication & Authorization
-- No authentication system currently implemented
+- **No authentication required** - completely open access application
 - Application designed for anonymous public access to service information
+- Users can browse, search, and contact services without creating accounts
+- Future enhancement: Optional user accounts only for saving favorite services or personal notes
 
 ## UI/UX Design Decisions
 - **Mobile-first responsive design** optimized for smartphone usage

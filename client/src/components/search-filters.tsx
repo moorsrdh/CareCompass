@@ -45,15 +45,29 @@ export default function SearchFilters({
         {/* Location */}
         <div className="mb-6">
           <label className="block text-sm font-medium text-muted-foreground mb-2">
-            Current Location
+            Showing services near
           </label>
           <div className="flex items-center space-x-2">
             <MapPin className="text-primary w-4 h-4" />
             <span className="text-foreground font-medium">Downtown San Francisco</span>
-            <Button variant="link" size="sm" className="text-primary underline p-0">
-              Update
+            <Button 
+              variant="link" 
+              size="sm" 
+              className="text-primary underline p-0"
+              onClick={() => {
+                const newLocation = prompt("Enter your location (city, zip code, or address):");
+                if (newLocation) {
+                  // In a real app, this would update the location and re-fetch services
+                  alert(`Location updated to: ${newLocation}\n\nNote: This is a demo app. In the full version, services would be filtered by your actual location.`);
+                }
+              }}
+            >
+              Change Location
             </Button>
           </div>
+          <p className="text-xs text-muted-foreground mt-1">
+            No sign-up required • Services sorted by distance
+          </p>
         </div>
 
         {/* Category Filters */}
