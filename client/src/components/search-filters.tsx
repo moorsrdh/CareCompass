@@ -18,6 +18,7 @@ const categories = [
   { id: "healthcare", label: "Healthcare", icon: "❤️" },
   { id: "social", label: "Social Services", icon: "👥" },
   { id: "employment", label: "Employment", icon: "💼" },
+  { id: "community", label: "Community & Faith", icon: "⛪" },
 ];
 
 export default function SearchFilters({

@@ -15,6 +15,7 @@ const categoryColors = {
   healthcare: "border-destructive",
   social: "border-purple",
   employment: "border-secondary",
+  community: "border-primary",
 } as const;
 
 const categoryIcons = {
@@ -25,6 +26,7 @@ const categoryIcons = {
   healthcare: "❤️",
   social: "👥",
   employment: "💼",
+  community: "⛪",
 } as const;
 
 const categoryBgColors = {
@@ -35,6 +37,7 @@ const categoryBgColors = {
   healthcare: "bg-destructive/10",
   social: "bg-purple/10",
   employment: "bg-secondary/10",
+  community: "bg-primary/10",
 } as const;
 
 const categoryTextColors = {
@@ -45,6 +48,7 @@ const categoryTextColors = {
   healthcare: "text-destructive",
   social: "text-purple",
   employment: "text-secondary",
+  community: "text-primary",
 } as const;
 
 const distanceBadgeColors = {
@@ -55,6 +59,7 @@ const distanceBadgeColors = {
   healthcare: "bg-destructive text-destructive-foreground",
   social: "bg-purple text-purple-foreground",
   employment: "bg-secondary text-secondary-foreground",
+  community: "bg-primary text-primary-foreground",
 } as const;
 
 export default function ServiceCard({ service }: ServiceCardProps) {
@@ -89,7 +94,9 @@ export default function ServiceCard({ service }: ServiceCardProps) {
               {service.name}
             </h3>
             <p className="text-muted-foreground capitalize">
-              {service.category === 'social' ? 'Social Services' : service.category}
+              {service.category === 'social' ? 'Social Services' : 
+               service.category === 'community' ? 'Community & Faith' : 
+               service.category}
             </p>
           </div>
         </div>

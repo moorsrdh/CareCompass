@@ -35,7 +35,8 @@ export const categories = [
   "hygiene",
   "healthcare",
   "social",
-  "employment"
+  "employment",
+  "community"
 ] as const;
 
 export type Category = typeof categories[number];

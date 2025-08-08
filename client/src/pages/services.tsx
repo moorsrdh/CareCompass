@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { type Service } from "@shared/schema";
-import AppHeader from "@/components/app-header";
-import SearchFilters from "@/components/search-filters";
-import ServiceCard from "@/components/service-card";
-import EmergencyFAB from "@/components/emergency-fab";
+import AppHeader from "../components/app-header";
+import SearchFilters from "../components/search-filters";
+import ServiceCard from "../components/service-card";
+import EmergencyFAB from "../components/emergency-fab";
 import { Button } from "@/components/ui/button";
 import { Map, List } from "lucide-react";
 

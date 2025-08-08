@@ -130,15 +130,82 @@ export class MemStorage implements IStorage {
         longitude: -122.4089,
         services: ["family support", "childcare", "parenting classes", "referrals"],
         requirements: "Family-focused services, children welcome"
+      },
+      {
+        name: "St. Francis Community Church",
+        category: "community",
+        description: "Free meals, clothing closet, emergency assistance, spiritual support",
+        address: "1025 Church Street, San Francisco, CA 94114",
+        phone: "+14155552468",
+        hours: "Daily 8am-8pm, Services: Sun 10am & 6pm",
+        isOpen: true,
+        status: "Open Now",
+        latitude: 37.7582,
+        longitude: -122.4291,
+        services: ["free meals", "clothing", "emergency assistance", "counseling", "spiritual support"],
+        requirements: "All faiths welcome, no religious requirement for services"
+      },
+      {
+        name: "Grace Baptist Church Outreach",
+        category: "community",
+        description: "Food pantry, homeless assistance, job training programs, community meals",
+        address: "567 Divisadero Street, San Francisco, CA 94117",
+        phone: "+14155558765",
+        hours: "Wed-Sat 9am-5pm, Community Meals: Tue & Thu 6pm",
+        isOpen: true,
+        status: "Open Now",
+        latitude: 37.7749,
+        longitude: -122.4394,
+        services: ["food pantry", "homeless assistance", "job training", "community meals"],
+        requirements: "Open to all, no documentation required"
+      },
+      {
+        name: "Salvation Army Community Center",
+        category: "community",
+        description: "Comprehensive homeless services, shelter, meals, addiction recovery",
+        address: "1500 Valencia Street, San Francisco, CA 94110",
+        phone: "+14155556789",
+        hours: "24/7 Emergency Services, Programs: Mon-Fri 8am-6pm",
+        isOpen: true,
+        status: "Open Now",
+        latitude: 37.7499,
+        longitude: -122.4194,
+        services: ["emergency shelter", "meals", "addiction recovery", "case management", "spiritual care"],
+        requirements: "Intake assessment required for programs"
+      },
+      {
+        name: "Islamic Society of SF Assistance",
+        category: "community",
+        description: "Food assistance, temporary shelter, community support for all faiths",
+        address: "20 Jones Street, San Francisco, CA 94102",
+        phone: "+14155554321",
+        hours: "Daily 9am-7pm, Friday Services: 1pm",
+        isOpen: true,
+        status: "Open Now",
+        latitude: 37.7849,
+        longitude: -122.4094,
+        services: ["food assistance", "temporary shelter", "community support", "financial aid"],
+        requirements: "Open to all regardless of faith or background"
       }
     ];
 
     sampleServices.forEach(service => {
       const id = randomUUID();
       const fullService: Service = {
-        ...service,
         id,
-        distance: Math.round((Math.random() * 2 + 0.1) * 10) / 10
+        name: service.name,
+        category: service.category,
+        description: service.description,
+        address: service.address,
+        phone: service.phone,
+        hours: service.hours,
+        isOpen: service.isOpen,
+        status: service.status,
+        latitude: service.latitude,
+        longitude: service.longitude,
+        distance: Math.round((Math.random() * 2 + 0.1) * 10) / 10,
+        services: service.services,
+        requirements: service.requirements || null
       };
       this.services.set(id, fullService);
     });
@@ -173,9 +240,20 @@ export class MemStorage implements IStorage {
   async createService(insertService: InsertService): Promise<Service> {
     const id = randomUUID();
     const service: Service = {
-      ...insertService,
       id,
-      distance: Math.round((Math.random() * 2 + 0.1) * 10) / 10
+      name: insertService.name,
+      category: insertService.category,
+      description: insertService.description,
+      address: insertService.address,
+      phone: insertService.phone,
+      hours: insertService.hours,
+      isOpen: insertService.isOpen,
+      status: insertService.status,
+      latitude: insertService.latitude,
+      longitude: insertService.longitude,
+      distance: Math.round((Math.random() * 2 + 0.1) * 10) / 10,
+      services: insertService.services,
+      requirements: insertService.requirements || null
     };
     this.services.set(id, service);
     return service;
